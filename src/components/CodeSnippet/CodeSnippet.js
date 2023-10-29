@@ -2,18 +2,18 @@
 
 import React from 'react';
 
-function CodeSnippet({ children }) {
-  const [isSnippetShown, setIsSnippetShown] = React.useState(false);
+function Revealable({ children }) {
+  const [isShown, setIsShown] = React.useState(false);
 
-  if (isSnippetShown) {
+  if (isShown) {
     return <>{children}</>;
   }
 
   return (
     <div className='reveal'>
-      <button onClick={() => setIsSnippetShown(true)}>Reveal Content</button>
+      <button onClick={() => setIsShown(true)}>Reveal Content</button>
     </div>
   );
 }
 
-export default CodeSnippet;
+export default Revealable;
